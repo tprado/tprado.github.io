@@ -1,31 +1,32 @@
 <footer class="site-footer">
-
   <div class="wrapper">
-
     <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <ul class="contact-list single-row">
-          <li>&copy; 2015 Thiago Prado</li>
 
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>&copy; 2015 {{ site.title }}</li>
           <li>
           <a href="https://sks-keyservers.net/pks/lookup?op=vindex&search={{ site.gpg_key_id }}&fingerprint=on" target="#">
             <span class="username">OpenPGP key {{ site.gpg_key_id }}</span>
           </a>
           </li>
+        </ul>
+      </div>
 
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
           <li>
           <a href="https://github.com/{{ site.github_username }}" target="_blank">
             <span class="username">github.com/{{ site.github_username }}</span>
           </a>
           </li>
-
         </ul>
       </div>
 
+      <div class="footer-col footer-col-3">
+        <p class="description">Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>.</p>
+      </div>
+
     </div>
-
   </div>
-
 </footer>
