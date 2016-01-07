@@ -10,4 +10,4 @@ github_username: tprado
 # Build settings
 markdown: kramdown
 timezone: America/Sao_Paulo
-exclude: [README.md, Gemfile, Gemfile.lock, Makefile]
+exclude: [README.md, Gemfile, Gemfile.lock, Makefile, .workbench]

@@ -6,7 +6,7 @@ permalink: /about/
 
 My name is Thiago Prado. I am a software developer based in Porto Alegre, RS, Brazil.
 
-After almost 15 years writing code, I'm still having fun doing it. I’m passionate about writing high quality code and learning new ways of achieving that.
+After almost 15 years writing code, I'm still having fun doing it. I'm passionate about writing high quality code and learning new ways of achieving that.
 
 Topics that I’m interested in include DevOps, microservices, and functional programming. Lately, I spent most of my free time learning Erlang, watching movies and playing padel.
 
