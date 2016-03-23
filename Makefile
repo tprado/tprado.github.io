@@ -1,6 +1,6 @@
 all:
-	jekyll server --watch
+	bundle exec jekyll server --watch
 
 .PHONY: build
 build:
-	jekyll build
+	bundle exec jekyll build

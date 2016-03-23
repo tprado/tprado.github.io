@@ -1,0 +1,45 @@
+---
+layout: post
+title:  "J8Spec"
+date:   2016-03-23 18:00:00
+categories: java
+---
+After a couple of years away from Java, I had a hard time transitioning back from Ruby and JavaScript, particularly in the test framework area. I was so used to [RSpec][rspec] and [Jasmine][jasmine]... and now I had to go back to [JUnit][junit].  Don't get me wrong, [JUnit][junit] is a great tool, but [RSpec][rspec] tests are way more expressive.
+
+So, I started to play around with Java 8 and lambda expressions, and decided to see how far I could go writing a framework similar to [RSpec][rspec] for the Java land.
+
+The result is [J8Spec][j8spec]. Here's an example:
+
+{% highlight java %}
+package j8spec.examples;
+
+import j8spec.junit.J8SpecRunner;
+import org.junit.runner.RunWith;
+
+import static j8spec.J8Spec.describe;
+import static j8spec.J8Spec.it;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
+@RunWith(J8SpecRunner.class)
+public class CalculatorTest {
+  {
+    describe("operations", () -> {
+      it("adds two integers", () -> {
+        Calculator calculator = new Calculator();
+
+        assertThat(calculator.add(1, 3), is(4));
+      });
+    });
+  }
+}
+{% endhighlight %}
+
+Thanks to [JUnit][junit]'s fantastic design, [J8Spec][j8spec] tests are execute as regular [JUnit][junit] tests, leveraging all the existing tooling.
+
+I'm very happy with the outcome, even considering the limitations Java imposes. ;)
+
+[j8spec]:       http://j8spec.github.io
+[rspec]:        http://rspec.info
+[jasmine]:      http://jasmine.github.io
+[junit]:        http://junit.org
